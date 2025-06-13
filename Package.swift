@@ -11,7 +11,7 @@ let package = Package(
     name: "TravelCommon",
     platforms: [
         .iOS(.v13),
-        .macOS(.v10_15)
+        .macOS("14.0.0"),
     ],
     products: [
         .library(

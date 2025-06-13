@@ -78,6 +78,12 @@ public class User: NSObject, Codable {
         return customCountry ?? country
     }
     
+    public func getUserId() throws -> String? {
+        // Ensure user id
+        guard !userId!.isEmpty else { throw NSError(domain: "com.travelcommon.user", code: 1001, userInfo: nil) }
+        return userId!
+    }
+    
     /// Update custom language preference
     public func setCustomLanguage(_ language: String?) {
         self.customLanguage = language

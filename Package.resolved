@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "747c8db8d57b68d5e35275f10c92d55f982adbd4",
+          "version": "4.9.1"
+        }
+      },
+      {
+        "package": "CommonSwaggerClient",
+        "repositoryURL": "https://github.com/Lascade-Co/CommonSwaggerClient.git",
+        "state": {
+          "branch": "main",
+          "revision": "a7907a14fddea4fe23c7f3081db7558ea0e8ae73",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
