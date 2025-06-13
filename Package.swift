@@ -1,17 +1,17 @@
+// swift-tools-version:5.5
 //
 //  Package.swift
 //  FlightFramework
 //
 //  Created by Rohit T P on 14/06/25.
 //
-
-// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
     name: "TravelCommon",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v13), // Adjust minimum iOS version as needed
+        .macOS(.v10_15)
     ],
     products: [
         .library(
