@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "TravelCommon",
     platforms: [
-        .iOS(.v13), // Adjust minimum iOS version as needed
+        .iOS(.v13),
         .macOS(.v10_15)
     ],
     products: [
@@ -19,22 +19,29 @@ let package = Package(
             targets: ["TravelCommon"]),
     ],
     dependencies: [
-        // Add FlightSwaggerClient dependency
-        .package(url: "https://github.com/Lascade-Co/CommonSwaggerClient.git", from: "main")
-        // OR if using local package:
-        // .package(path: "../FlightSwaggerClient")
+        // Use branch instead of "from" for branch names
+        .package(url: "https://github.com/Lascade-Co/CommonSwaggerClient.git", .branch("main"))
+        // OR use a version tag:
+        // .package(url: "https://github.com/Lascade-Co/CommonSwaggerClient.git", from: "1.0.0")
+        // OR use a commit hash:
+        // .package(url: "https://github.com/Lascade-Co/CommonSwaggerClient.git", .revision("commit-hash"))
     ],
     targets: [
         .target(
             name: "TravelCommon",
-            dependencies: ["CommonSwaggerClient"],
+            dependencies: [
+                // Specify the exact product from CommonSwaggerClient
+                .product(name: "FlightSwaggerClient", package: "CommonSwaggerClient"),
+                // If you need both:
+                // .product(name: "AdsSwaggerClient", package: "CommonSwaggerClient"),
+            ],
             path: "TravelCommon",
-                        swiftSettings: [
-                            .unsafeFlags([
-                                "-enable-library-evolution",
-                                "-emit-module-interface"
-                            ])
-                        ]
+            swiftSettings: [
+                .unsafeFlags([
+                    "-enable-library-evolution",
+                    "-emit-module-interface"
+                ])
+            ]
         ),
     ]
 )
