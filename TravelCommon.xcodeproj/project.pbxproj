@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1C0F58922DFCB94100F1B60C /* TravelCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0F58862DFCB94000F1B60C /* TravelCommon.framework */; };
+		1C0F58A22DFCBD1E00F1B60C /* AdsSwaggerClient in Frameworks */ = {isa = PBXBuildFile; productRef = 1C0F58A12DFCBD1E00F1B60C /* AdsSwaggerClient */; };
+		1C0F58A42DFCBD1E00F1B60C /* DataSwaggerClient in Frameworks */ = {isa = PBXBuildFile; productRef = 1C0F58A32DFCBD1E00F1B60C /* DataSwaggerClient */; };
+		1C0F58AC2DFCC32A00F1B60C /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0F58AB2DFCC32A00F1B60C /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +26,7 @@
 /* Begin PBXFileReference section */
 		1C0F58862DFCB94000F1B60C /* TravelCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TravelCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0F58912DFCB94100F1B60C /* TravelCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C0F58AB2DFCC32A00F1B60C /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0F58A42DFCBD1E00F1B60C /* DataSwaggerClient in Frameworks */,
+				1C0F58A22DFCBD1E00F1B60C /* AdsSwaggerClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,7 @@
 		1C0F587C2DFCB94000F1B60C = {
 			isa = PBXGroup;
 			children = (
+				1C0F58AB2DFCC32A00F1B60C /* Package.swift */,
 				1C0F58882DFCB94000F1B60C /* TravelCommon */,
 				1C0F58952DFCB94100F1B60C /* TravelCommonTests */,
 				1C0F58872DFCB94000F1B60C /* Products */,
@@ -106,6 +113,8 @@
 			);
 			name = TravelCommon;
 			packageProductDependencies = (
+				1C0F58A12DFCBD1E00F1B60C /* AdsSwaggerClient */,
+				1C0F58A32DFCBD1E00F1B60C /* DataSwaggerClient */,
 			);
 			productName = TravelCommon;
 			productReference = 1C0F58862DFCB94000F1B60C /* TravelCommon.framework */;
@@ -161,6 +170,9 @@
 			);
 			mainGroup = 1C0F587C2DFCB94000F1B60C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1C0F58A02DFCBD1E00F1B60C /* XCRemoteSwiftPackageReference "CommonSwaggerClient" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1C0F58872DFCB94000F1B60C /* Products */;
 			projectDirPath = "";
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0F58AC2DFCC32A00F1B60C /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +484,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C0F58A02DFCBD1E00F1B60C /* XCRemoteSwiftPackageReference "CommonSwaggerClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lascade-Co/CommonSwaggerClient.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C0F58A12DFCBD1E00F1B60C /* AdsSwaggerClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C0F58A02DFCBD1E00F1B60C /* XCRemoteSwiftPackageReference "CommonSwaggerClient" */;
+			productName = AdsSwaggerClient;
+		};
+		1C0F58A32DFCBD1E00F1B60C /* DataSwaggerClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C0F58A02DFCBD1E00F1B60C /* XCRemoteSwiftPackageReference "CommonSwaggerClient" */;
+			productName = DataSwaggerClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C0F587D2DFCB94000F1B60C /* Project object */;
 }

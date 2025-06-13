@@ -1,0 +1,24 @@
+{
+  "originHash" : "b815d026f880e80042033942ddc851ad324964c29ad1a04a5eb56764a1aed074",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "747c8db8d57b68d5e35275f10c92d55f982adbd4",
+        "version" : "4.9.1"
+      }
+    },
+    {
+      "identity" : "commonswaggerclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lascade-Co/CommonSwaggerClient.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e9b718d7d0d89e5c97ef6af7204767ce7d24bbf6"
+      }
+    }
+  ],
+  "version" : 3
+}
