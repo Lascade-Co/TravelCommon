@@ -31,7 +31,7 @@ let package = Package(
             name: "TravelCommon",
             dependencies: [
                 // Specify the exact product from CommonSwaggerClient
-                .product(name: "FlightSwaggerClient", package: "CommonSwaggerClient"),
+                .product(name: "AdsSwaggerClient", package: "CommonSwaggerClient"),
                 // If you need both:
                 // .product(name: "AdsSwaggerClient", package: "CommonSwaggerClient"),
             ],
